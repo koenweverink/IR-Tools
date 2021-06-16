@@ -282,9 +282,3 @@ class ParseRegistry:
             logging.info("'Root' doesn't contain the subkey 'File'.")
 
         self.f.close()
-
-
-    
-if __name__ == '__main__':
-    run = ParseRegistry(r'C:\Users\koenw\Desktop\School\Afstuderen\Results\\', 'wmi_results', '', False)
-    print(help(run))
