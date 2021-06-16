@@ -126,8 +126,3 @@ class maliciousWMI:
         filename = 'amcache'
         destination = str(self.path + self.folder + '//{}' + self.today + '.json').format(filename)
         self.v.query(query, destination)
-
-
-if __name__ == '__main__':
-    r = maliciousWMI(r'C:\Users\koenw\Desktop\School\Afstuderen\Results\\')
-    print(help(r))
