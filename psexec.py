@@ -92,8 +92,4 @@ class maliciousPsExec:
         """
         filename = 'amcache'
         destination = str(self.path + self.folder + '//{}' + self.today + '.json').format(filename)
-        self.v.query(query, destination)    
-
-if __name__ == '__main__':
-    e = maliciousPsExec(r'C:\Users\koenw\Desktop\School\Afstuderen\Results\\')
-    print(help(e))
+        self.v.query(query, destination)
