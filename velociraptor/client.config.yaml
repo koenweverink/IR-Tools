@@ -1,0 +1,56 @@
+version:
+  name: velociraptor
+  version: 0.6.0-rc1
+  commit: 00a58d67
+  build_time: "2021-06-09T11:52:16+10:00"
+Client:
+  server_urls:
+  - https://localhost:8000/
+  ca_certificate: |
+    -----BEGIN CERTIFICATE-----
+    MIIDSzCCAjOgAwIBAgIQSHpxSwiH0JitFe3GPgYjkzANBgkqhkiG9w0BAQsFADAa
+    MRgwFgYDVQQKEw9WZWxvY2lyYXB0b3IgQ0EwHhcNMjEwNjA5MTMzMTE1WhcNMzEw
+    NjA3MTMzMTE1WjAaMRgwFgYDVQQKEw9WZWxvY2lyYXB0b3IgQ0EwggEiMA0GCSqG
+    SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6pOrJUWuYiGMYtKf42qVZSaYZAlewD6Yb
+    DLOgk8oN1cS00tLd0M+oCNaCKkrAiA7PUAqhT3cM7r0TH7aYhYm07sE6y7GgRvD+
+    AMRwsTX1tC5Hkkf3tkG13qF3aM9x3mjkQ+5SyiHG/XTABupKVq+pbQjhyO93Ckzj
+    ax4gBd79IbAff31j7oxgSpk4G4G0SgIMAlVn/woy3AcN4ZJUglEft96w+2/6jbqj
+    u7aUfp0LIvzvXt1oEUqsCK0E3c4SDNHM3LFa4T7TSvwweLJbucCequLhl15oUd+A
+    1mQIXikifdsfJfq0JGijN4rnwtA/A3EwguIAbP4mIwISz330FDLPAgMBAAGjgYww
+    gYkwDgYDVR0PAQH/BAQDAgKkMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcD
+    AjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTj5VkSSMvVSD+vvfIeZTzf42iu
+    ujAoBgNVHREEITAfgh1WZWxvY2lyYXB0b3JfY2EudmVsb2NpZGV4LmNvbTANBgkq
+    hkiG9w0BAQsFAAOCAQEAhyL3hZPR6x3nV6k5YgmCqBKdySMuVO6es7o7T6TY7jTs
+    HpjXxerZDZb5n2BMJgSK4De/4PpnIMIhBZfkrt1dVeGJ+gAihst7TJMUxKpH9SwB
+    oP49BEl4kO8Sg7+6gmvdBuHzAMbH7deP95SOE+dShpc0RxYc1W9NE2ieVpe6c8aS
+    /Gj/yC/O4clL9dHhLATj+YmHcltQ3ztg7tbVxzBkoZbXMxSnPpT7EWyX1F6FpnxL
+    SVbNsGUWknN9jwfnl7jQEek3EPXknmZh6cNbSp/60yMboquYzQ6f+Y358jaOp+F5
+    T/k7JtLIFi4f88XlyG0Rg3XJ2C+jV2CI8PMMseVCjA==
+    -----END CERTIFICATE-----
+  nonce: tHRWXUVirwE=
+  writeback_darwin: /etc/velociraptor.writeback.yaml
+  writeback_linux: /etc/velociraptor.writeback.yaml
+  writeback_windows: $ProgramFiles\Velociraptor\velociraptor.writeback.yaml
+  tempdir_windows: $ProgramFiles\Velociraptor\Tools
+  max_poll: 60
+  windows_installer:
+    service_name: Velociraptor
+    install_path: $ProgramFiles\Velociraptor\Velociraptor.exe
+    service_description: Velociraptor service
+  darwin_installer:
+    service_name: com.velocidex.velociraptor
+    install_path: /usr/local/sbin/velociraptor
+  version:
+    name: velociraptor
+    version: 0.6.0-rc1
+    commit: 00a58d67
+    build_time: "2021-06-09T11:52:16+10:00"
+  use_self_signed_ssl: true
+  pinned_server_name: VelociraptorServer
+  max_upload_size: 5242880
+  local_buffer:
+    memory_size: 52428800
+    disk_size: 1073741824
+    filename_linux: /var/tmp/Velociraptor_Buffer.bin
+    filename_windows: $TEMP/Velociraptor_Buffer.bin
+    filename_darwin: /var/tmp/Velociraptor_Buffer.bin
