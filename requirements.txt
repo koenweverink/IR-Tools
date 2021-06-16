@@ -1,0 +1,5 @@
+lxml
+Evtx
+regipy
+yara-python
+pyvelociraptor
