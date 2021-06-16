@@ -62,11 +62,3 @@ class CredentialDump:
         filename = 'creddump_result'
         destination = str(self.path + self.folder + '//{}' + self.today + '.json').format(filename)
         self.v.query(query, destination)
-
-
-if __name__ == "__main__":
-    folder = 'C:\\Users\\koenw\\Desktop\\School\\Afstuderen\\IR-Tools\\mimikatz\\'
-    map = 'C:\\Users\\koenw\\Desktop\\School\\Afstuderen\\IR-Tools\\mimikatz\\'
-    r = CredentialDump(folder, map)
-    print(help(r))
-    
