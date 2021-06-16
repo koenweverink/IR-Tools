@@ -1,0 +1,63 @@
+{
+    "ConsumerDetails": {
+        "Category": 0,
+        "CreatorSID": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5,
+            32,
+            0,
+            0,
+            0,
+            32,
+            2,
+            0,
+            0
+        ],
+        "EventID": 0,
+        "EventType": 1,
+        "InsertionStringTemplates": [
+            ""
+        ],
+        "MachineName": null,
+        "MaximumQueueSize": null,
+        "Name": "SCM Event Log Consumer",
+        "NameOfRawDataProperty": null,
+        "NameOfUserSIDProperty": "sid",
+        "NumberOfInsertionStrings": 0,
+        "SourceName": "Service Control Manager",
+        "UNCServerName": null
+    },
+    "FilterDetails": {
+        "CreatorSID": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5,
+            32,
+            0,
+            0,
+            0,
+            32,
+            2,
+            0,
+            0
+        ],
+        "EventAccess": null,
+        "EventNamespace": "root\\cimv2",
+        "Name": "SCM Event Log Filter",
+        "Query": "select * from MSFT_SCMEventLogEvent",
+        "QueryLanguage": "WQL"
+    },
+    "Namespace": "root/subscription",
+    "_Source": "Windows.Persistence.PermanentWMIEvents"
+}
