@@ -132,8 +132,3 @@ class ParseEventLogs:
                         output_csv = 'File csv.4104_' + self.today + '.csv is toegevoegd aan de map: ' + self.map
                         print(output_csv)
         return result, output_xml, output_csv
-
-
-if __name__ == "__main__":
-    run = ParseEventLogs(r'C:\Users\koenw\Desktop\School\Afstuderen\Results\\', 'wmi_results')
-    print(help(run))
