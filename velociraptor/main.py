@@ -1,47 +1,3 @@
-'''
-To start frontend:
-velociraptor.exe --config server.config.yaml frontend -v
-
-To add new user:
-velociraptor.exe --config server.config.yaml user add Koen --role administrator
-
-To add client:
-velociraptor.exe --config client.config.yaml client -v
-
-
-REFERENCE QUERIES:
-query_basic_info="""
-SELECT config.Version.Name AS Name,
-       config.Version.BuildTime as BuildTime,
-       config.Labels AS Labels,
-       Hostname, OS, Architecture,
-       Platform, PlatformVersion, KernelVersion, Fqdn,
-       {
-          SELECT * FROM if(
-             condition=version(plugin='wmi') != NULL,
-             then={
-                 SELECT Domain FROM wmi(query='SELECT Domain FROM win32_computersystem')
-             })
-       } AS ADDomain
-FROM info()
-"""
-
-query_users="""
-SELECT Name, Description, Mtime AS LastLogin
-FROM Artifact.Windows.Sys.Users()
-"""
-
-query_eventlog="""
-SELECT System.EventID.Value AS EventID,
-        System.TimeCreated.SystemTime AS TimeCreated,
-        System.Computer AS Computer,
-        EventData.LogonType As LogonType
-        
-FROM parse_evtx(filename='C:/Windows/System32/Winevt/Logs/Security.evtx') 
-WHERE System.EventID.Value = 4624 AND EventData.LogonType = 5
-"""
-'''
-
 from pyvelociraptor import api_pb2
 from pyvelociraptor import api_pb2_grpc
 
@@ -91,17 +47,3 @@ class Velociraptor:
                             print(row)
                             with open(destination, 'a', encoding='utf-8') as f:
                                 json.dump(row, f, ensure_ascii=False, indent=4)
-
-
-# if __name__ == "__main__":
-#     v = Velociraptor()
-
-#     dest = 'test_amc_p.json'
-#     query = """
-#         SELECT *
-#         FROM Artifact.Windows.System.Amcache()
-#         WHERE Name = 'format_sd.exe'
-#         OR Name = 'fold.exe'
-#         """
-#     v.query(query, dest)
-
