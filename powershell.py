@@ -131,9 +131,4 @@ class maliciousPowershell:
         """
         filename = 'powershell_module_results'
         destination = str(self.path + self.folder + '//{}' + self.today + '.json').format(filename)
-        self.v.query(query, destination)        
-
-
-if __name__ == '__main__':
-    p = maliciousPowershell(r'C:\Users\koenw\Desktop\School\Afstuderen\Results\\')
-    print(help(p))
+        self.v.query(query, destination)
