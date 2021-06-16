@@ -228,8 +228,4 @@ class ParseFilesystem:
                 if not self.malware_prefetch and not self.created_datum_prefetch and not self.mod_datum_prefetch and not self.overig_prefetch:
                     self.f.write(output + '\n')
             
-        self.f.close()     
-
-if __name__ == "__main__":
-    p = ParseFilesystem(r'C:\Users\koenw\Desktop\School\Afstuderen\Results\\', 'wmi_results', '', False)
-    print(help(p))
+        self.f.close()
