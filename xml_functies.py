@@ -79,7 +79,6 @@ def xml_7040(System, path, map, today):
                     tree.write(filepathxml)
 
     result = 'Results eventID 7040: ' + str(count)
-    print(result)
     return result
 
 def xml_7045(System, path, map, today):
@@ -147,7 +146,6 @@ def xml_7045(System, path, map, today):
                     tree.write(filepathxml)
 
     result = 'Results eventID 7045: ' + str(count)
-    print(result)
     return result
 
 #PowerShell-Operational
@@ -217,7 +215,6 @@ def xml_4104(WinPowerShellO, path, map, today):
 
                 tree.write(filepathxml)
     result = 'Results eventID 4104: ' + str(count)
-    print(result)
     return result
 
 def xml_53504(WinPowerShellO, path, map, today):
@@ -286,5 +283,4 @@ def xml_53504(WinPowerShellO, path, map, today):
 
                 tree.write(filepathxml)
     result = 'Results eventID 53504: ' + str(count)
-    print(result)
     return result
