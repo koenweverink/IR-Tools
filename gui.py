@@ -170,7 +170,6 @@ class CollectAndAnalyse:
         Then, it will check if the user has selected the DI option, and if so, it will check which of the top 5 the user wants analyzed and then perform that analysis.
         Finally, the function will end by outputting 'done' and setting the state of the output box back to 'disabled' so that it can't be altered. 
         """
-        time1 = datetime.datetime.now().time()
         path = str(self.dfolderpath.get() + '/')
         today = str(datetime.date.today())
         try:
@@ -367,7 +366,6 @@ class CollectAndAnalyse:
                 self.output.insert('end', "Looking for wsmprovhost.exe inside Prefetch \n")
                 self.mainframe.update_idletasks()
                 m.powershell_filesystem()
-                print(os.stat(path + '\\powershell_results\\filesystem' + today + '.txt').st_size)
                 if os.stat(path + '\\powershell_results\\filesystem' + today + '.txt').st_size == 0:
                     self.output.insert('end', "Did not find wsmprovhost.exe inside Prefetch \n\n")
                     os.remove(path + '\\powershell_results\\filesystem' + today + '.txt')
@@ -503,9 +501,6 @@ class CollectAndAnalyse:
         self.mainframe.update_idletasks()
 
         self.output['state'] = 'disabled'
-        time2 = datetime.datetime.now().time()        
-        print(str(time1) + '\n' + str(time2))
-    
 
 root = Tk()
 CollectAndAnalyse(root)
