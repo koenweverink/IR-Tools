@@ -44,6 +44,5 @@ class Velociraptor:
                 for response in stub.Query(request):
                     if response.Response:
                         for row in json.loads(response.Response):
-                            print(row)
                             with open(destination, 'a', encoding='utf-8') as f:
                                 json.dump(row, f, ensure_ascii=False, indent=4)
