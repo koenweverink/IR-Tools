@@ -66,12 +66,10 @@ class ParseEventLogs:
         for file in os.listdir(self.paths):
             if file == 'xml_7040_' + self.today + '.xml':
                 output_xml = 'File xml.7040_' + self.today + '.xml is toegevoegd aan de map: ' + self.map
-                print(output_xml)
                 csv_functies.csv_7040(self.path, self.map, self.today)
                 for file2 in os.listdir(self.paths):
                     if file2 == 'csv_7040_' + self.today + '.csv':
                         output_csv = 'File csv.7040_' + self.today + '.csv is toegevoegd aan de map: ' + self.map
-                        print(output_csv)
         return result, output_xml, output_xml
 
     # System (7045)
@@ -85,12 +83,10 @@ class ParseEventLogs:
         for file in os.listdir(self.paths):
             if file == 'xml_7045_' + self.today + '.xml':
                 output_xml = 'File xml.7045_' + self.today + '.xml is toegevoegd aan de map: ' + self.map 
-                print(output_xml)
                 csv_functies.csv_7045(self.path, self.map, self.today)
                 for file2 in os.listdir(self.paths):
                     if file2 == 'csv_7045_' + self.today + '.csv':
                         output_csv = 'File csv.7045_' + self.today + '.csv is toegevoegd aan de map: ' + self.map
-                        print(output_csv)
         return result, output_xml, output_csv
 
 
@@ -105,12 +101,10 @@ class ParseEventLogs:
         for file in os.listdir(self.paths):
             if file == 'xml_53504_' + self.today + '.xml':
                 output_xml = 'File xml.53504_' + self.today + '.xml is toegevoegd aan de map: ' + self.map
-                print(output_xml)
                 csv_functies.csv_53504(self.path, self.map, self.today)
                 for file2 in os.listdir(self.paths):
                     if file2 == 'csv_53504_' + self.today + '.csv':
                         output_csv = 'File csv.53504_' + self.today + '.csv is toegevoegd aan de map: ' + self.map
-                        print(output_csv)
         return result, output_xml, output_csv
 
 
@@ -125,10 +119,8 @@ class ParseEventLogs:
         for file in os.listdir(self.paths):
             if file == 'xml_4104_' + self.today + '.xml':
                 output_xml = 'File xml.4104_' + self.today + '.xml is toegevoegd aan de map: ' + self.map
-                print(output_xml)
                 csv_functies.csv_4104(self.path, self.map, self.today)
                 for file2 in os.listdir(self.paths):
                     if file2 == 'csv_4104_' + self.today + '.csv':
                         output_csv = 'File csv.4104_' + self.today + '.csv is toegevoegd aan de map: ' + self.map
-                        print(output_csv)
         return result, output_xml, output_csv
