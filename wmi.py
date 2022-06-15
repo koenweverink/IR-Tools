@@ -17,7 +17,7 @@ class maliciousWMI:
 
         # Place all the paths here
         self.SYSTEM_evtx = r'C:\Windows\System32\winevt\Logs\System.evtx'
-        self.SYSTEM_reg = r'C:\Users\koenw\Desktop\School\Afstuderen\IR-Tools\Registries\SYSTEM'
+        self.SYSTEM_reg = r'C:\Users\...\IR-Tools\Registries\SYSTEM'
         self.Prefetch = 'C:\Windows\Prefetch'
         # self.Amcache = r'C:\Windows\appcompat\Programs\Amcache.hve'
 
