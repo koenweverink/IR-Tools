@@ -16,7 +16,7 @@ class maliciousPowershell:
 
         '''Place all the variables here, whenever a separate collection has already been performed.'''
         self.SYSTEM_evtx = r'C:\Windows\System32\winevt\Logs\System.evtx'
-        self.SYSTEM_reg = r'C:\Users\koenw\Desktop\School\Afstuderen\IR-Tools\Registries\SYSTEM'
+        self.SYSTEM_reg = r'C:\Users\...\IR-Tools\Registries\SYSTEM'
         self.WinPowerShell_O = 'C:\Windows\System32\winevt\Logs\Microsoft-Windows-PowerShell%4Operational.evtx'
         self.Prefetch = 'C:\Windows\Prefetch'
         self.path = path
